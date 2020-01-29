@@ -15,9 +15,9 @@
 		<form>
 		<div class="row">
 			<div class="col-md-4">
-				<button class="btn-danger" class="button">Player One</button>
+				<button class="btn-danger" id="button1">Player One</button>
 				<p></p>
-				<button class ="btn-success" class="button">Player Two</button>
+				<button class ="btn-success" id="button2">Player Two</button>
 			</div>
 			<div class="col-md-4">
 				<h2>ROLL:</h2>
@@ -26,11 +26,14 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<h2>SCORE:</h2>
+				<h2>SCORE: <span id="p1Score"></span></h2>
 				<div class="scoreP1Output">
-
+					<ul>
+					</ul>
 				</div>
-				<h2>SCORE:</h2>
+				<h2>SCORE: <span id="p2Score"></span></h2>
+				<ul id="p2Score">
+				</ul>
 				<div class="scoreP2Output">
 
 				</div>

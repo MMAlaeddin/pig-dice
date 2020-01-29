@@ -1,13 +1,19 @@
 //back end
-function Roll(){
-  this.roll = roll
+
+finalScore = [];
+
+function Player1(currentScore) {
+  this.currentScore = 0;
+}
+ function displayScore(currentScore) {
+  $(".scoreP1Output").push(currentScore);
+ }
+
+Player1.prototype.updateScore = function() {
+  this.currentScore += clickRoll;
+  return(currentScore);
 
 }
-
-function Score(){
-  this.roll = parseInt($(["" + ""]))
-}
-
 
 
 
@@ -33,16 +39,23 @@ function Score(){
 
 
 $(document).ready(function() {
-  $("button").click(function(event) {
+  $("#button1").click(function(event) {
     event.preventDefault();
 
     var clickRoll = Math.floor(
       Math.random() * 6 ) +1;
-      $(".rollOutput").text(clickRoll);
-
-    
-
+      parseInt($(".rollOutput").text(clickRoll));
+      $("#p1Score").append("<li>" + clickRoll +"</li>");
+   
   })
   
-  
+  $("#button2").click(function(event) {
+    event.preventDefault();
+
+    var clickRoll = Math.floor(
+      Math.random() * 6 ) +1;
+      parseInt($(".rollOutput").text(clickRoll));
+      $("#p2Score").append("<li>" + clickRoll +"</li>");
+   
+  })
 });
