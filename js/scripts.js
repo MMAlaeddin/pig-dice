@@ -1,41 +1,16 @@
-//back end
-
-finalScore = [];
-
-function Player1(currentScore) {
-  this.currentScore = 0;
-}
- function displayScore(currentScore) {
-  $(".scoreP1Output").push(currentScore);
- }
-
-Player1.prototype.updateScore = function() {
-  this.currentScore += clickRoll;
-  return(currentScore);
-
+function Player(currentScore, finalScore) {
+  this.currentScore = currentScore,
+  this.finalScore += clickRoll
 }
 
-
-
-
-
-
-
-
-
-
-
-
+var finalScore = [];
+var sum = 0;
+// for (var i = 0; i <= finalScore.length; i ++) {
+//   finalScore += clickRoll;
 
 
 
 //front end
-
-
-
-
-
-
 
 
 $(document).ready(function() {
@@ -45,8 +20,12 @@ $(document).ready(function() {
     var clickRoll = Math.floor(
       Math.random() * 6 ) +1;
       parseInt($(".rollOutput").text(clickRoll));
-      $("#p1Score").append("<li>" + clickRoll +"</li>");
+      finalScore.push(clickRoll);
+      $("#p1Score").append("<li>" + clickRoll + "</li>");
    
+
+   
+
   })
   
   $("#button2").click(function(event) {
@@ -55,7 +34,8 @@ $(document).ready(function() {
     var clickRoll = Math.floor(
       Math.random() * 6 ) +1;
       parseInt($(".rollOutput").text(clickRoll));
-      $("#p2Score").append("<li>" + clickRoll +"</li>");
-   
-  })
+      finalScore.push(clickRoll);
+      $("#p2Score").append("<li>" + clickRoll + "</li>");
+      
+  });
 });
